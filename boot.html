@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Template</title>
+    <!-- IMPORTED BOOTSTRAP CONTENT -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- YOUR CSS STYLES -->
+    <link rel="stylesheet" href="yourstyles.css">
+  </head>
+  <body>
+
+    <header>
+      <h1 class = "title">name company</h1>
+    </header>
+
+    <section class = "container">
+
+      <div class="row">
+
+        <div class = "col-12 col-sm-16 col-lg-4 option">
+
+          <h3 class = "title">Option A</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, harum ipsa! Et sunt aliquam accusantium labore explicabo, rerum eligendi repudiandae molestiae doloribus assumenda expedita tempore totam at excepturi veniam quae.</p>
+          <a class="price title" href="">$19.99</a>
+
+        </div>
+
+        <div class = "col">
+
+          <h3 class = "title">Option B</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, harum ipsa! Et sunt aliquam accusantium labore explicabo, rerum eligendi repudiandae molestiae doloribus assumenda expedita tempore totam at excepturi veniam quae.</p>
+          <a class="price title" href="">$24.99</a>
+
+        </div>
+
+        <div class = "col">
+
+          <h3 class = "title">Option C</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, harum ipsa! Et sunt aliquam accusantium labore explicabo, rerum eligendi repudiandae molestiae doloribus assumenda expedita tempore totam at excepturi veniam quae.</p>
+          <a class="price title" href="">$29.99</a>
+
+        </div>
+
+       
+      </div>
+
+      <form class="row" id="cart" method="GET" action="boot.html" oninput="calculate()">
+        Option: 
+        <select name="option" id="option">
+          <option value="19.99">A</option>
+          <option value="24.99">B</option>
+          <option value="29.99">C</option>
+        </select>
+        Months: <input id="time" type="number" value="12" min="0">
+        Total: <output id="result" name="out" for="option time"></output>
+
+      </form>
+
+    </section>
+
+    <script>
+      function calculate(){
+        let doc = document;
+        let option = doc.getElementById("option")
+        let time = doc.getElementById("time")
+        let result = doc.getElementById("result")
+
+        result.value = "$" + parseFloat(option.value) * parseFloat(time.value);
+      }
+    </script>
+    
+    
+
+
+
+
+
+    <!-- IMPORTED BOOTSTRAP CONTENT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

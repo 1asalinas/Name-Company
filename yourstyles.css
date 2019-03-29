@@ -1,0 +1,34 @@
+header{
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.title{
+    text-align: center;
+}
+
+p{
+    font-weight: 600;
+}
+
+.price{
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+#cart{
+    padding: 16px;
+    border: 2px solid rgb(0, 200, 200);
+    width: 600px;
+    margin: 0 auto;
+}
+
+#cart > select,
+#cart > input{
+    margin-right: 16px;
+}
+
+output{
+    font-weight: 700;
+}
